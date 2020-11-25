@@ -22,6 +22,7 @@ RUN apt-get update; \
 		sed -i 's|http://repo.mysql.com|https://repo.mysql.com|g' $filename; \
 		sed -i 's|http://apt.postgresql.org|https://apt.postgresql.org|g' $filename; \
 		done; \
+		apt-get update; \
 		apt-get install -y --no-install-recommends wget gnupg; \
 		apt-get purge -y --auto-remove; apt-get clean; rm -rf /var/lib/apt/lists/*; \
 		aptlists=$(find /etc/apt -type f -name "*.list")
