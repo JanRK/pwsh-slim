@@ -21,7 +21,10 @@ RUN apt-get update; \
 		sed -i 's|http://apt.llvm.org|https://apt.llvm.org|g' $filename; \
 		sed -i 's|http://repo.mysql.com|https://repo.mysql.com|g' $filename; \
 		sed -i 's|http://apt.postgresql.org|https://apt.postgresql.org|g' $filename; \
-		done
+		done; \
+		apt-get install -y --no-install-recommends wget gnupg; \
+		apt-get purge -y --auto-remove; apt-get clean; rm -rf /var/lib/apt/lists/*; \
+		aptlists=$(find /etc/apt -type f -name "*.list")
 
 # Powershell
 RUN wget --directory-prefix=/usr/share/keyrings https://packages.microsoft.com/keys/microsoft.asc; \
