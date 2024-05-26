@@ -1,7 +1,7 @@
+FROM debian:stable-slim
+
 ARG  PWSH_VERSION=7.4.2-1
 ARG  PWSH_FOLDER=v7.4.2
-
-FROM debian:stable-slim
 
 ENV DEBIAN_FRONTEND=noninteractive \
 		POWERSHELL_CLI_TELEMETRY_OPTOUT=1 \
