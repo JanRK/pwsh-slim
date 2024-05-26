@@ -2,4 +2,4 @@
 
 quay.io/janrk/pwsh-slim
 
-Updated 20221031
+Updated 20240527
