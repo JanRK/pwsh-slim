@@ -31,10 +31,10 @@ RUN apt-get update; \
 
 # Powershell
 RUN apt-get update; \
-		wget https://github.com/PowerShell/PowerShell/releases/download/$PWSH_FOLDER/powershell_$PWSH_VERSION.deb_amd64.deb; \
-		dpkg -i powershell_$PWSH_VERSION.deb_amd64.deb; \
+		wget https://github.com/PowerShell/PowerShell/releases/download/${PWSH_FOLDER}/powershell_${PWSH_VERSION}.deb_amd64.deb; \
+		dpkg -i powershell_${PWSH_VERSION}.deb_amd64.deb; \
   		apt-get install -f; \
-    		rm powershell_$PWSH_VERSION.deb_amd64.deb; \
+    		rm powershell_${PWSH_VERSION}.deb_amd64.deb; \
 		apt-get purge -y --auto-remove; apt-get clean; rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT ["pwsh"]
