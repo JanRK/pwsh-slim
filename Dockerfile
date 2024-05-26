@@ -31,7 +31,7 @@ RUN apt-get update; \
 # Powershell
 RUN apt-get update; \
 		wget --quiet https://github.com/PowerShell/PowerShell/releases/download/${PWSH_FOLDER}/powershell_${PWSH_VERSION}.deb_amd64.deb; \
-  		apt-get install -y --no-install-recommends libgssapi-krb5-2 libicu72 
+  		apt-get install -y --no-install-recommends libgssapi-krb5-2 libicu72; \
 		dpkg -i powershell_${PWSH_VERSION}.deb_amd64.deb; \
   		apt-get install -f; \
     		rm powershell_${PWSH_VERSION}.deb_amd64.deb; \
