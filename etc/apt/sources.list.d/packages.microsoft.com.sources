@@ -1,0 +1,13 @@
+Enabled: yes
+Types: deb
+URIs: https://packages.microsoft.com/debian/13/prod
+Suites: trixie
+Components: main
+Signed-By: /etc/apt/keyrings/packages.microsoft.com.asc
+
+Enabled: yes
+Types: deb
+URIs: https://packages.microsoft.com/debian/12/prod
+Suites: bookworm
+Components: main
+Signed-By: /etc/apt/keyrings/legacy.packages.microsoft.com.asc
