@@ -1,0 +1,13 @@
+Package: *
+Pin: release n=trixie*
+Pin-Priority: 500
+
+# temporary workaround for powershell
+Package: *
+Pin: release n=bookworm*
+Pin-Priority: -1
+
+Package: libicu72
+Pin: release n=bookworm*
+Pin-Priority: 500
+# temporary workaround end
